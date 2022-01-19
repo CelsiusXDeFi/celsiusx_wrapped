@@ -1,0 +1,37 @@
+{
+  "name": "wrapped_token",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "npx truffle compile --all",
+    "console": "npx truffle console",
+    "test": "npx truffle test test/capabilities/*.js && npx truffle test test/roles/* && npx truffle test test/*.js",
+    "coverage": "npx truffle run coverage",
+    "deployWrappedKovan": "npx truffle migrate --f 2 --to 2 --network kovan --reset --compile-all",
+    "deployWrappedEthereum": "npx truffle migrate --f 2 --to 2 --network ethereum --reset --compile-all",
+    "deployWrappedMumbai": "npx truffle migrate --f 2 --to 2 --network mumbai --reset --compile-all",
+    "deployWrappedPolygon": "npx truffle migrate --f 2 --to 2 --network polygon --reset --compile-all"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@chainlink/contracts": "0.1.9",
+    "@openzeppelin/contracts-upgradeable": "4.4.0"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "@truffle/hdwallet-provider": "^1.5.0",
+    "bignumber.js": "^9.0.2",
+    "dotenv": "^10.0.0",
+    "ganache-cli": "^6.9.1",
+    "solidity-coverage": "^0.7.17",
+    "truffle": "^5.4.24",
+    "truffle-contract-size": "^2.0.0",
+    "truffle-flattener": "^1.5.0",
+    "truffle-plugin-verify": "^0.5.14"
+  }
+}
