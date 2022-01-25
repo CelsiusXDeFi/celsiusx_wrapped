@@ -138,12 +138,6 @@ npx truffle run verify WrappedTokenV1 --network mumbai
 npx truffle run verify Proxy --network mumbai
 ```
 
-or
-
-```
-npm run migrate mumbai
-```
-
 # General Warnings
 
 ### Proxy Deployment

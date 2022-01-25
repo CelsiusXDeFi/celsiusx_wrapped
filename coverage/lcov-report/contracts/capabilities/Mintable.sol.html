@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/capabilities/Mintable.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/capabilities/</a> Mintable.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">90.91% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>20/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>8/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.78% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">90.91% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>20/22</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">108×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">108×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
+&nbsp;
+pragma solidity ^0.8.0;
+&nbsp;
+import "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol";
+&nbsp;
+import "../roles/MinterRole.sol";
+&nbsp;
+/// @title Mintable Contract
+/// @notice Only administrators can mint tokens
+/// @dev Enables increasing a balance by minting tokens
+contract Mintable is
+    ERC20FlashMintUpgradeable,
+    MinterRole,
+    ReentrancyGuardUpgradeable
+{
+    event Mint(address indexed minter, address indexed to, uint256 amount);
+&nbsp;
+    uint256 public flashMintFee = 0;
+    address public flashMintFeeReceiver;
+&nbsp;
+    bool public isFlashMintEnabled = false;
+&nbsp;
+    bytes32 public constant _RETURN_VALUE =
+        keccak256("ERC3156FlashBorrower.onFlashLoan");
+&nbsp;
+    /// @notice Only administrators should be allowed to mint on behalf of another account
+    /// @dev Mint a quantity of token in an account, increasing the balance
+    /// @param minter Designated to be allowed to mint account tokens
+    /// @param to The account tokens will be increased to
+    /// @param amount The number of tokens to add to a balance
+    function _mint(
+        address minter,
+        address to,
+        uint256 amount
+    ) internal returns (bool) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(
+            ERC20FlashMintUpgradeable.maxFlashLoan(address(this)) &gt; amount,
+            "mint exceeds max allowed"
+        );
+&nbsp;
+        ERC20Upgradeable._mint(to, amount);
+        emit Mint(minter, to, amount);
+        return true;
+    }
+&nbsp;
+    /// @notice Only administrators should be allowed to update this
+    /// @dev Enable or disable the flash mint functionality
+    /// @param enabled A boolean flag that enables tokens to be flash minted
+    function _setFlashMintEnabled(bool enabled) internal {
+        isFlashMintEnabled = enabled;
+    }
+&nbsp;
+    /// @notice Only administrators should be allowed to update this
+    /// @dev Sets the address that will receive fees of flash mints
+    /// @param receiver The account that will receive flash mint fees
+    function _setFlashMintFeeReceiver(address receiver) internal {
+        flashMintFeeReceiver = receiver;
+    }
+&nbsp;
+    /// @dev Allow Owners to mint tokens to valid addresses
+    /// @param account The account tokens will be added to
+    /// @param amount The number of tokens to add to a balance
+    function mint(address account, uint256 amount)
+        public
+        virtual
+        onlyMinter
+        returns (bool)
+    {
+        return Mintable._mint(msg.sender, account, amount);
+    }
+&nbsp;
+    /// @dev Public function to set the fee paid by the borrower for a flash mint
+    /// @param fee The number of tokens that will cost to flash mint
+    function setFlashMintFee(uint256 fee) public onlyMinter {
+        flashMintFee = fee;
+    }
+&nbsp;
+    /// @dev Public function to enable or disable the flash mint functionality
+    /// @param enabled A boolean flag that enables tokens to be flash minted
+<span class="fstat-no" title="function not covered" >    function setFlashMintEnabled(bool enabled) public onlyMinter {</span>
+<span class="cstat-no" title="statement not covered" >        _setFlashMintEnabled(enabled)</span>;
+    }
+&nbsp;
+    /// @dev Public function to update the receiver of the fee paid for a flash mint
+    /// @param receiver The account that will receive flash mint fees
+<span class="fstat-no" title="function not covered" >    function setFlashMintFeeReceiver(address receiver) public onlyMinter {</span>
+<span class="cstat-no" title="statement not covered" >        _setFlashMintFeeReceiver(receiver)</span>;
+    }
+&nbsp;
+    /// @dev Public function that returns the fee set for a flash mint
+    /// @param token The token to be flash loaned
+    /// @return The fees applied to the corresponding flash loan
+    function flashFee(address token, uint256)
+        public
+        view
+        override
+        returns (uint256)
+    {
+        require(token == address(this), "ERC20FlashMint: wrong token");
+&nbsp;
+        return flashMintFee;
+    }
+&nbsp;
+    /// @dev Performs a flash loan. New tokens are minted and sent to the
+    /// `receiver`, who is required to implement the {IERC3156FlashBorrower}
+    /// interface. By the end of the flash loan, the receiver is expected to own
+    /// amount + fee tokens so that the fee can be sent to the fee receiver and the
+    /// amount minted should be burned before the transaction completes
+    /// @param receiver The receiver of the flash loan. Should implement the
+    /// {IERC3156FlashBorrower.onFlashLoan} interface
+    /// @param token The token to be flash loaned. Only `address(this)` is
+    /// supported
+    /// @param amount The amount of tokens to be loaned
+    /// @param data An arbitrary datafield that is passed to the receiver
+    /// @return `true` if the flash loan was successful
+    function flashLoan(
+        IERC3156FlashBorrowerUpgradeable receiver,
+        address token,
+        uint256 amount,
+        bytes calldata data
+    ) public override nonReentrant returns (bool) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(isFlashMintEnabled, "flash mint is disabled");
+&nbsp;
+        uint256 fee = flashFee(token, amount);
+        _mint(address(receiver), amount);
+&nbsp;
+        require(
+            receiver.onFlashLoan(msg.sender, token, amount, fee, data) ==
+                _RETURN_VALUE,
+            "ERC20FlashMint: invalid return value"
+        );
+        uint256 currentAllowance = allowance(address(receiver), address(this));
+        require(
+            currentAllowance &gt;= amount + fee,
+            "ERC20FlashMint: allowance does not allow refund"
+        );
+&nbsp;
+        _transfer(address(receiver), flashMintFeeReceiver, fee);
+        _approve(
+            address(receiver),
+            address(this),
+            currentAllowance - amount - fee
+        );
+        _burn(address(receiver), amount);
+&nbsp;
+        return true;
+    }
+&nbsp;
+    uint256[47] private __gap;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Dec 14 2021 14:11:15 GMT-0500 (Eastern Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
